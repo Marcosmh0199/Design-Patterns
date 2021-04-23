@@ -32,4 +32,14 @@ public class ComboBox implements Colega {
     public void addItem(String pItem) {
         items.add(pItem);
     }
+
+    @Override
+    public void comunicar(String mensaje, Colega colega) {
+        mediator.enviar(mensaje, colega); 
+    }
+
+    @Override
+    public void recibir(String mensaje) {
+        System.out.println( "ComboBox recibio: " + mensaje );
+    }
 }

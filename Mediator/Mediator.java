@@ -40,4 +40,9 @@ public class Mediator implements IMediator {
     public void setTexto(String pTexto) {
         CampoTexto.setTexto(pTexto);
     }
+
+    @Override
+    public void enviar(String mensaje, Colega colega) {
+        colega.recibir(mensaje);
+    }
 }

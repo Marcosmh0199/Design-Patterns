@@ -17,5 +17,7 @@ public class Main {
         System.out.println(mediator.getLista());
         comboBox.viewLista();
 
+        System.out.println();
+        campoTexto.comunicar("Hola!", comboBox);
     }
 }

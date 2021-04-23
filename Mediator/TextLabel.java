@@ -27,4 +27,13 @@ public class TextLabel implements Colega {
         return texto;
     }
     
+    @Override
+    public void comunicar(String mensaje, Colega colega) {
+        mediator.enviar(mensaje, colega); 
+    }
+
+    @Override
+    public void recibir(String mensaje) {
+        System.out.println( "Label recibio: " + mensaje );
+    }
 }

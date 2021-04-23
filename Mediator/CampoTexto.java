@@ -25,5 +25,15 @@ public class CampoTexto implements Colega {
 
     public String getTexto() {
         return texto;
-    }  
+    }
+
+    @Override
+    public void comunicar(String mensaje, Colega colega) {
+        mediator.enviar(mensaje, colega);
+    }
+
+    @Override
+    public void recibir(String mensaje) {
+        System.out.println( "CampoTexto recibio: " + mensaje );
+    }
 }
